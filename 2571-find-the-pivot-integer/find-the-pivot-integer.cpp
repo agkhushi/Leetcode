@@ -1,10 +1,11 @@
 class Solution {
 public:
     int pivotInteger(int n) {
+        if(n==1) return n;
         int l = 1;
         int r = n;
         int sum=(n*(n+1))/2;
-        while(l<=r){
+        while(l<r){
             int mid = l+(r-l)/2;
             int firstsum=(mid*(mid+1))/2;
             int endsum=sum-firstsum+mid;
