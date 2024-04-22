@@ -4,7 +4,7 @@ public:
         int n=startTime.size();
         int times=0;
         for(int i=0;i<n;i++){
-                if(queryTime>=startTime[i] && queryTime<=endTime[i]){
+                if(startTime[i]<=queryTime && endTime[i]>=queryTime){
                     times++;
                 }
         }
