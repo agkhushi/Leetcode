@@ -7,7 +7,7 @@ public:
         int y=0;
         for(int i=0,j=0;i<n || j<m ;i++,j++){
             while(i<n && version1[i]!='.'){
-                x= 10*x + (version1[i++]-'0');
+                x=10*x + (version1[i++]-'0');
             }
              while(j<m && version2[j]!='.'){
                 y=10*y + (version2[j++]-'0');
