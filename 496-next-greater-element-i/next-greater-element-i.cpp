@@ -4,12 +4,9 @@ public:
         int n = nums1.size();
         int m = nums2.size();
         vector<int> ans;
-
         for (int i = 0; i < n; i++) {
-            int found = 0;
             for (int j = 0; j < m; j++) {
                 if (nums2[j] == nums1[i]) {
-                    found = 1;
                     int k = j + 1;
                     while (k < m && nums2[k] <= nums2[j]) {
                         k++;
