@@ -1,26 +1,16 @@
 class Solution {
 public:
     bool kLengthApart(vector<int>& nums, int k) {
+        int last = -1;
         int n=nums.size();
-        int counter=0;
-        bool firstone = true;
         for(int i=0;i<n;i++){
             if(nums[i]==1){
-                if(firstone){
-                    firstone= false;
-                    counter=0;
-                    continue;
+                if(last!=-1){
+                    if(i-last-1<k){
+                        return false;
+                    }
                 }
-                else if(counter<k){
-                    return false;
-                }
-                else{
-                    counter=0;
-                }
-
-            }
-            else{
-                counter++;
+                last=i;
             }
         }
         return true;
